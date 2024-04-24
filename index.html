@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- popup box -->
+    <section id="popup" class="popup">
+        <section class="popup-content">
+            <header>
+                <h2>Choose Converter</h2>
+            </header>
+            <h3>Auto Converter</h3>
+            <button id="btn1">Click Here!</button>
+            <h3>Manual Converter</h3>
+            <button id="btn2">Click Here!</button>
+        </section>
+    </section>
+    <!-- Navbar -->
+    <nav class="navbar hide">
+        <a href="#" class="navbar-logo">Son<span>L</span></a>
+        <section class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#main-menu">Converter</a>
+            <a href="#contact">Contact</a>
+        </section>
+    </nav>
+    <!-- Header -->
+    <header class="head hide" id="home">
+        <section class="content">
+            <h1>Temperature <span>Converter</span></h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </section>
+    </header>
+    <!-- Main Section -->
+    <main class="main-menu hide" id="main-menu">
+        <section class="main-section">
+            <header>
+                <h2>
+                    <span class="span-1">Enter the temperature in</span>
+                    <span class="span-2">Celcius <span class="span-1">(&deg;C)</span>, Fahrenheit <span class="span-1">(&deg;F), dan </span>Kelvin <span class="span-1">(&deg;K)</span></span>
+                </h2>
+            </header>
+            <form id="input-auto">
+                <label for="fahrenheit-auto">Fahrenheit</label>
+                <input name="fahrenheit-auto" id="fahrenheit-auto" class="input" type="number" min=""
+                placeholder="Fahrenheit">
+                <label for="celsius-auto">Celsius</label>
+                <input name="celsius-auto" id="celsius-auto" class="input" type="number" min="-273.15"
+                placeholder="Celsius">
+                <label for="kelvin-auto">Kelvin</label>
+                <input name="kelvin-auto" id="kelvin-auto" class="input" type="number" min=""
+                placeholder="Kelvin">
+            </form>
+            <form id="input-manual">
+                <label for="fahrenheit-auto">Fahrenheit</label>
+                <input name="fahrenheit-manual" id="fahrenheit-manual" class="input fahrenheit" type="number" min=""
+                placeholder="Fahrenheit">
+                <label for="celsius-auto">Celsius</label>
+                <input name="celsius-manual" id="celsius-manual" class="input celsius" type="number" min="-273.15"
+                placeholder="Celsius">
+                <label for="kelvin-auto">Kelvin</label>
+                <input name="kelvin-manual" id="kelvin-manual" class="input kelvin" type="number" min=""
+                placeholder="Kelvin">
+                <section id="btn">
+                    <button class="btn" id="convert" type="button">Konversi</button>
+                    <button class="btn" id="reset" type="button">Reset</button>
+                    <button class="btn" id="reverse" type="button">Reverse</button>
+                </section>
+            </form>
+            <section id="explain" class="explain">
+                <section id="c-to-f" class="explain">
+                    <header>
+                        <h2>Cara Konversi dari Celsius (&deg;C) ke Fahrenheit (&deg;F)</h2>
+                        <hr>
+                    </header>
+                    <section class="content">
+                        <p>
+                            Suhu <span class="math"><i>S</i></span> dalam derajat Fahrenheit 
+                            <span class="math">(&deg;F)</span> sama dengan suhu <span class="math"><i>S</i></span> 
+                            dalam derajat <span class="math">(&deg;C)</span> dikali <span class="math">9/5</span> 
+                            ditambah <span class="math">32</span>
+                        </p>
+                        <br>
+                        <p class="math">
+                            <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> &times; 9/5) + 32
+                            atau
+                            <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> &times; 1.8) + 32
+                        </p>
+                    </section>
+                </section>
+                <section id="f-to-c" class="explain">
+                    <header>
+                        <h2>Cara Konversi dari Fahrenheit (&deg;F) ke Celsius (&deg;C)</h2>
+                        <hr>
+                    </header>
+                    <section class="content">
+                        <p>
+                            Suhu <span class="math"><i>S</i></span> dalam derajat Celsius 
+                            <span class="math">(&deg;C)</span> sama dengan suhu <span class="math"><i>S</i></span> 
+                            dalam derajat <span class="math">(&deg;F)</span> dikurang <span class="math">32</span> 
+                            dikali <span class="math">5/9</span>
+                        </p>
+                        <br>
+                        <p class="math">
+                            <i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> - 32) &times; 5/9
+                        </p>
+                    </section>
+                </section>
+                <section id="c-to-k" class="explain">
+                    <header>
+                        <h2>Cara Konversi dari Celsius (&deg;C) ke Kelvin (K)</h2>
+                        <hr>
+                    </header>
+                    <section class="content">
+                        <p>
+                            Suhu <span class="math"><i>S</i></span> dalam Kelvin 
+                            <span class="math">(K)</span> sama dengan suhu <span class="math"><i>S</i></span> 
+                            dalam derajat <span class="math">(&deg;C)</span> ditambah dengan <span class="math">273.15</span>
+                        </p>
+                        <br>
+                        <p class="math">
+                            <i>S</i><sub>(K)</sub> = <i>S</i><sub>(&deg;C)</sub> + 273.15
+                        </p>
+                    </section>
+                </section>
+                <section id="k-to-c" class="explain">
+                    <header>
+                        <h2>Cara Konversi dari Kelvin (K) ke Celsius (&deg;C)</h2>
+                        <hr>
+                    </header>
+                    <section class="content">
+                        <p>
+                            Suhu <span class="math"><i>S</i></span> dalam derajat Celsius
+                            <span class="math">(&deg;C)</span> sama dengan suhu <span class="math"><i>S</i></span> 
+                            dalam Kelvin <span class="math">(K)</span> dikurang dengan <span class="math">273.15</span>
+                        </p>
+                        <br>
+                        <p class="math">
+                            <i>S</i><sub>(&deg;C)</sub> = <i>S</i><sub>(K)</sub> - 273.15
+                        </p>
+                    </section>
+                </section>
+                <section id="f-to-k" class="explain">
+                    <header>
+                        <h2>Cara Konversi dari Fahrenheit (&deg;F) ke Kelvin (K)</h2>
+                        <hr>
+                    </header>
+                    <section class="content">
+                        <p>
+                            Suhu <span class="math"><i>S</i></span> dalam Kelvin
+                            <span class="math">(K)</span> sama dengan suhu <span class="math"><i>S</i></span> 
+                            dalam derajat Fahrenheit <span class="math">(&deg;F)</span> ditambah dengan 
+                            <span class="math">459.67</span> dikali <span class="math">5/9</span>
+                        </p>
+                        <br>
+                        <p class="math">
+                            <i>S</i><sub>(K)</sub> = (<i>S</i><sub>(&deg;F)</sub> + 459.67) &times; 5/9
+                        </p>
+                    </section>
+                </section>
+                <section id="k-to-f" class="explain">
+                    <header>
+                        <h2>Cara Konversi dari Kelvin (K) ke Fahrenheit (&deg;F)</h2>
+                        <hr>
+                    </header>
+                    <section class="content">
+                        <p>
+                            Suhu <span class="math"><i>S</i></span> dalam derajat Fahrenheit
+                            <span class="math">(&deg;F)</span> sama dengan suhu <span class="math"><i>S</i></span> 
+                            dalam Kelvin <span class="math">(K)</span> dikali dengan 
+                            <span class="math">9/5</span> dikurang dengan <span class="math">459.67</span>
+                        </p>
+                        <br>
+                        <p class="math">
+                            <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(K)</sub> &times; 9/5) - 459.67
+                        </p>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer hide">
+        <section class="socials">
+            <a href=""><i data-feather="instagram"></i></a>
+            <a href=""><i data-feather="facebook"></i></a>
+            <a href=""><i data-feather="linkedin"></i></a>
+        </section>
+        <section class="credit">
+            <p>Created by <a href="">Son L</a> | &copy; 2024</p>
+        </section>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
